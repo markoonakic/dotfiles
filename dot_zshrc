@@ -1,0 +1,23 @@
+# Path to your oh-my-zsh installation.
+export ZSH="$HOME/.oh-my-zsh"
+
+export EDITOR="nvim"
+
+ZSH_THEME=""
+
+plugins=(git kubectl zsh-autocomplete zsh-syntax-highlighting zsh-autosuggestions sudo dirhistory web-search)
+
+source $ZSH/oh-my-zsh.sh
+
+bindkey -v
+
+#Aliases
+
+alias cl="clear"
+alias v="nvim"
+alias vim="nvim"
+alias anime="ani-cli"
+alias cdl="cd && cl"
+alias py="python3"
+alias k="kubectl"
+alias z="zi"
