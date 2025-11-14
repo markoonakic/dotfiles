@@ -21,3 +21,5 @@ alias cdl="cd && cl"
 alias py="python3"
 alias k="kubectl"
 alias z="zi"
+
+eval "$(mise activate zsh)"
