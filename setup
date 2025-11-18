@@ -7,6 +7,19 @@ if command -v zsh >/dev/null; then
     sudo chsh -s $(command -v zsh) $USER
 fi
 
+# Install plugins if Oh My Zsh is installed
+if [ -n "${ZSH:-}" ] && [ -d "${ZSH}" ]; then
+  ZSH_CUSTOM="${ZSH_CUSTOM:-$ZSH/custom}"
+  mkdir -p "$ZSH_CUSTOM/plugins"
+
+  [ -d "$ZSH_CUSTOM/plugins/zsh-autosuggestions" ] || \
+    git clone https://github.com/zsh-users/zsh-autosuggestions.git "$ZSH_CUSTOM/plugins/zsh-autosuggestions"
+  [ -d "$ZSH_CUSTOM/plugins/zsh-syntax-highlighting" ] || \
+    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "$ZSH_CUSTOM/plugins/zsh-syntax-highlighting"
+  [ -d "$ZSH_CUSTOM/plugins/zsh-autocomplete" ] || \
+    git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git "$ZSH_CUSTOM/plugins/zsh-autocomplete"
+fi
+
 # Install Starship if missing
 if ! command -v starship >/dev/null 2>&1; then
   curl -fsSL https://starship.rs/install.sh | bash -s -- --yes
