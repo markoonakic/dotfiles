@@ -22,7 +22,7 @@ fi
 
 # Install Starship if missing
 if ! command -v starship >/dev/null 2>&1; then
-  curl -fsSL https://starship.rs/install.sh | bash -s -- --yes
+  curl -fsSL https://starship.rs/install.sh | sh -s -- --yes
 fi
 
 # Install chezmoi and apply dotfiles
