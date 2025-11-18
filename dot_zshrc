@@ -23,3 +23,10 @@ alias k="kubectl"
 alias z="zi"
 
 eval "$(mise activate zsh)"
+
+. "$HOME/.local/bin/env"
+eval "$(zoxide init zsh)"
+
+if command -v starship > /dev/null ; then
+	eval "$(starship init zsh)"
+fi
