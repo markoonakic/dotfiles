@@ -31,4 +31,10 @@ if ! command -v chezmoi >/dev/null; then
     sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply git@github.com:markoonakic/dotfiles.git
 fi
 
+# Clone neovim configuration
+NVIM_DIR="$HOME/.config/nvim"
+REPO="git@github.com:markoonakic/funky-nvim.git"
+mkdir -p "$(dirname "$NVIM_DIR")"
+[ -d "$NVIM_DIR/.git" ] || git clone --depth 1 "$REPO" "$NVIM_DIR"
+
 exit 0

@@ -40,8 +40,6 @@ alias gp="git push"
 
 alias py="python3"
 
-if [ -r "$HOME/.local/bin/env" ]; then . "$HOME/.local/bin/env"; fi
-
 if command -v mise > /dev/null ; then
   eval "$($HOME/.local/bin/mise activate zsh)"
 fi
