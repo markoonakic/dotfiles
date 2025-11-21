@@ -7,7 +7,7 @@ export EDITOR="nvim"
 
 ZSH_THEME=""
 
-plugins=(kubectl zsh-autocomplete zsh-syntax-highlighting zsh-autosuggestions sudo)
+plugins=(kubectl fzf-tab zsh-autocomplete zsh-syntax-highlighting zsh-autosuggestions sudo)
 
 source $ZSH/oh-my-zsh.sh
 
