@@ -1,7 +1,10 @@
 [tools]
 chezmoi = "latest"
+btop = "latest"
 bat = "latest"
 lsd = "latest"
+ripgrep = "latest"
+fd = "latest"
 fzf = "latest"
 zoxide = "latest"
 neovim = "latest"
